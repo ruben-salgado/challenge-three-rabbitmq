@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "c0e228a5-9f44-4668-b0df-b33041468fb0",
+		"name": "challenge-three-rabbitmq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34104324"
+	},
+	"item": [
+		{
+			"name": "carrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": 1,\r\n    \"productos\": [\r\n        {\r\n            \"name\": \"coca cola\",\r\n            \"stock\": 10,\r\n            \"price\": 12.5\r\n        },\r\n        {\r\n            \"name\": \"tv samsung\",\r\n            \"stock\": 5,\r\n            \"price\": 50.74\r\n        },\r\n        {\r\n            \"name\": \"snickers\",\r\n            \"stock\": 40,\r\n            \"price\": 1.54\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/tienda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tienda"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": 1,\r\n    \"productos\": [\r\n        {\r\n            \"name\": \"coca cola\",\r\n            \"stock\": 10,\r\n            \"price\": 12.5\r\n        },\r\n        {\r\n            \"name\": \"tv samsung\",\r\n            \"stock\": 5,\r\n            \"price\": 50.74\r\n        },\r\n        {\r\n            \"name\": \"snickers\",\r\n            \"stock\": 40,\r\n            \"price\": 1.54\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/tienda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"tienda"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 08 Apr 2024 00:55:47 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "108"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Message sent to Celery for processing for sale\",\n    \"task_id\": \"c5869e2f-66f9-47a9-b1fa-4c61215fda34\"\n}"
+				}
+			]
+		}
+	]
+}
